@@ -61,18 +61,15 @@ namespace Controls.ValueConverters
         {
             FieldInfo fieldInfo = enumObj.GetType().GetField(enumObj.ToString());
 
-            object[] attribArray = fieldInfo.GetCustomAttributes(false);
+            var attribArray = fieldInfo.GetCustomAttributes(false);
 
             if (attribArray.Length == 0)
             {
                 return enumObj.ToString();
             }
+
             DescriptionAttribute attrib = attribArray[0] as DescriptionAttribute;
-            if (attrib != null)
-            {
-                return attrib.Description;
-            }
-            return string.Empty;
+            return attrib != null ? attrib.Description : string.Empty;
         }
     }
 }
