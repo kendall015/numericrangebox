@@ -32,21 +32,21 @@ namespace Controls
     public enum NumericRangeBoxComparisonMode
     {
         [Description("=")]
-        Equals = 0,
+        Equals,
 
         [Description("<")]
-        LessThan = 1,
+        LessThan,
 
         [Description("≤")]
-        LessThanOrEqualTo = 2,
+        LessThanOrEqualTo,
 
         [Description(">")]
-        GreaterThan = 3,
+        GreaterThan,
 
         [Description("≥")]
-        GreaterThanOrEqualTo = 4,
+        GreaterThanOrEqualTo,
 
         [Description("≠")]
-        NotEquals = 5
+        NotEquals
     }
 }
