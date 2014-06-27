@@ -1,0 +1,36 @@
+﻿<Window x:Class="ExampleProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:nbr="clr-namespace:Controls;assembly=NumericRangeBox"
+        Title="MainWindow"
+        Width="400"
+        Height="250"
+        FontSize="12">
+    <DockPanel>
+        <DockPanel Margin="5 5 5 0" DockPanel.Dock="Top">
+            <Label>Filters:</Label>
+        </DockPanel>
+
+        <DockPanel Margin="5 0 5 5" DockPanel.Dock="Top">
+            <Label Width="75" VerticalAlignment="Center">Salary:</Label>
+            <nbr:NumericRangeBox Name="Rb1"
+                                 ComboBoxFontFamily="Tahoma"
+                                 ComboBoxFontSize="12"
+                                 ComboBoxFontWeight="Normal"
+                                 LabelFontFamily="Tahoma"
+                                 LabelFontSize="12"
+                                 LabelFontStyle="Normal"
+                                 LabelFontWeight="Bold"
+                                 SelectedOptions="{Binding Path=Rb1Options}"
+                                 TextBoxFontFamily="Tahoma"
+                                 TextBoxFontSize="12"
+                                 TextBoxFontStyle="Normal"
+                                 TextBoxFontWeight="Normal" />
+        </DockPanel>
+
+        <TextBox Margin="5 0 5 5"
+                 IsReadOnly="True"
+                 Text="{Binding Path=GeneratedSql}"
+                 VerticalScrollBarVisibility="Visible" />
+    </DockPanel>
+</Window>
